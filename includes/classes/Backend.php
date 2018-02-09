@@ -1,19 +1,17 @@
-<?php namespace WP_Plugins\Boilerplate;
+<?php namespace WP_Job_Manager_Mail_Applications;
 
 /**
  * Backend logic
  *
- * @package WP_Plugins\Boilerplate
+ * @package WP_Job_Manager_Mail_Applications
  */
-class Backend extends Component
-{
+class Backend extends Component {
 	/**
 	 * Constructor
 	 *
 	 * @return void
 	 */
-	protected function init()
-	{
+	protected function init() {
 		parent::init();
 	}
 }

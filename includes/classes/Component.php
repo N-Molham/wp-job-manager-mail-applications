@@ -1,12 +1,11 @@
-<?php namespace WP_Plugins\Boilerplate;
+<?php namespace WP_Job_Manager_Mail_Applications;
 
 /**
  * Base Component
  *
- * @package WP_Plugins\Boilerplate
+ * @package WP_Job_Manager_Mail_Applications
  */
-class Component extends Singular
-{
+class Component extends Singular {
 	/**
 	 * Plugin Main Component
 	 *
@@ -19,8 +18,7 @@ class Component extends Singular
 	 *
 	 * @return void
 	 */
-	protected function init()
-	{
+	protected function init() {
 		// vars
 		$this->plugin = Plugin::get_instance();
 	}

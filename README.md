@@ -1,3 +1,3 @@
-# wp-plugins-boilerplate
+# WP Job Manager - Mail Applications
 
-For Documentation go to [Wiki](https://github.com/N-Molham/wp-plugins-boilerplate/wiki)
+Quick way to mail job application with stored maillist
