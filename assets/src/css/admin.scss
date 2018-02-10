@@ -6,6 +6,11 @@
 
 #wpjm_ma_mail_application {
 
+	.inside > label {
+		display: block;
+	}
+
+	.inside > label,
 	.select2-container {
 		margin-bottom: 1em;
 	}

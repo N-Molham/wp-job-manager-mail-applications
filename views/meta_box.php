@@ -7,11 +7,13 @@
  */
 ?>
 
+<label for="mail-application-recipients"><?php _e( 'Select recipient(s) and/or add new ones', WPJM_MA_DOMAIN ); ?></label>
+
 <select id="mail-application-recipients" multiple="multiple"></select>
 
-<button type="button" class="button button-primary button-large" 
-        data-post="<?php echo esc_attr( $post->ID ); ?>" 
-        data-nonce="<?php echo esc_attr( wp_create_nonce( 'wpjm_ma_' . $post->ID ) )?>">
+<button type="button" class="button button-primary button-large"
+        data-post="<?php echo esc_attr( $post->ID ); ?>"
+        data-nonce="<?php echo esc_attr( wp_create_nonce( 'wpjm_ma_' . $post->ID ) ) ?>">
 	<span class="spinner"></span>
 	<?php _e( 'Send Application', WPJM_MA_DOMAIN ); ?>
 </button>
