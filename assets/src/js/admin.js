@@ -3,6 +3,11 @@
  */
 (function ( w, $, undefined ) {
 	$( function () {
-		console.log( 'Admin page loaded and ready to go, okay?' );
+
+		$( '#mail-application-recipients' ).select2( {
+			width: '100%',
+			tags : true
+		} );
+
 	} );
 })( window, jQuery );

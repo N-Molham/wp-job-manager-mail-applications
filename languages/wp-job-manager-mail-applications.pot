@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WP Job Manager - Mail Applications 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/wp-job-manager-mail-applications\n"
-"POT-Creation-Date: 2018-02-09 18:46:48+00:00\n"
+"POT-Creation-Date: 2018-02-10 14:02:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,6 +24,18 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
+
+#: includes/classes/Backend.php:35
+msgid "Mail Application"
+msgstr ""
+
+#: includes/classes/Backend.php:68
+msgid "Select recipient(s)"
+msgstr ""
+
+#: views/meta_box.php:16
+msgid "Send Application"
+msgstr ""
 
 #: wp-job-manager-mail-applications.php:107
 msgid "Template <code>%s</code> File not found, calculated path: <code>%s</code>"
