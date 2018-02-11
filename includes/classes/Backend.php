@@ -43,7 +43,9 @@ class Backend extends Component {
 	 */
 	public function render_mail_application_meta_box( $post, $meta_box ) {
 
-		wpjm_ma_view( 'meta_box', compact( 'post', 'meta_box' ) );
+		$saved_emails = get_option( 'wpjm_ma_emails', [] );
+		
+		wpjm_ma_view( 'meta_box', compact( 'post', 'meta_box', 'saved_emails' ) );
 
 	}
 
