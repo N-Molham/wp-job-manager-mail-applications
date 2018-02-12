@@ -4,30 +4,39 @@
 (function ( w, $, undefined ) {
 	$( function () {
 
-		var $recipients = $( '#mail-application-recipients' ).select2( {
-			width: '100%',
-			tags : true
+		$( '#the-list' ).find( 'a.button.icon-mail-application' ).each( function ( index, link ) {
+			$( this ).webuiPopover( {
+				url: link.hash
+			} )
 		} );
 
-		$( '#wpjm_ma_mail_application' ).on( 'click', 'button.button-primary', function ( e ) {
-
-			var $this      = $( e.currentTarget ),
-			    recipients = $.map( $recipients.select2( 'data' ), function ( item ) {
-				    return item.text;
+		$( '.wpjm-ma-mail-application' ).each( function () {
+			var $application = $( this ),
+			    $recipients  = $application.find( 'select' ).select2( {
+				    width: '100%',
+				    tags : true
 			    } );
 
-			if ( !recipients.length ) {
-				return true;
-			}
+			$application.on( 'click', 'button.button-primary', function ( e ) {
 
-			var request_args = $.extend( {}, $this.data(), { recipients: recipients } );
+				var $button    = $( e.currentTarget ),
+				    recipients = $.map( $recipients.select2( 'data' ), function ( item ) {
+					    return item.text;
+				    } );
 
-			$this.prop( 'disabled', true ).addClass( 'loading' );
+				if ( !recipients.length ) {
+					return true;
+				}
 
-			$.post( ajaxurl, request_args, function ( response ) {
-				alert( response.data );
-			} ).always( function () {
-				$this.prop( 'disabled', false ).removeClass( 'loading' );
+				var request_args = $.extend( {}, $button.data(), { recipients: recipients } );
+
+				$button.prop( 'disabled', true ).addClass( 'loading' );
+
+				$.post( ajaxurl, request_args, function ( response ) {
+					alert( response.data );
+				} ).always( function () {
+					$button.prop( 'disabled', false ).removeClass( 'loading' );
+				} );
 			} );
 		} );
 

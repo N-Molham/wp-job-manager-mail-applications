@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WP Job Manager - Mail Applications 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/wp-job-manager-mail-applications\n"
-"POT-Creation-Date: 2018-02-12 09:30:28+00:00\n"
+"POT-Creation-Date: 2018-02-12 11:26:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,11 +45,11 @@ msgstr ""
 msgid "Application sent to: "
 msgstr ""
 
-#: includes/classes/Backend.php:35
+#: includes/classes/Backend.php:44 includes/classes/Backend.php:69
 msgid "Mail Application"
 msgstr ""
 
-#: includes/classes/Backend.php:70
+#: includes/classes/Backend.php:112
 msgid "Select recipient(s)"
 msgstr ""
 

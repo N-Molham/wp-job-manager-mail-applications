@@ -4,13 +4,21 @@
 @import "utils";
 @import "flex";
 
-#wpjm_ma_mail_application {
+.widefat .column-job_application_actions .icon-mail-application:before {
+	content: "\e81c";
+}
 
-	.inside > label {
+div.wpjm-ma-mail-application {
+
+	.webui-popover .webui-popover-content > & {
+		width: 260px;
+	}
+	
+	label {
 		display: block;
 	}
 
-	.inside > label,
+	label,
 	.select2-container {
 		margin-bottom: 1em;
 	}
@@ -31,4 +39,8 @@
 			opacity: 1;
 		}
 	}
+}
+
+.select2-container {
+	z-index: 9999;
 }
