@@ -68,7 +68,7 @@ class Ajax_Handler extends Component {
 		] );
 
 		$subject = do_shortcode( get_job_application_email_subject() );
-		$message = do_shortcode( get_job_application_email_content() );
+		$message = do_shortcode( $this->plugin->backend->get_job_application_email_content() );
 		$message = str_replace( "\n\n\n\n", "\n\n", implode( "\n", array_map( 'trim', explode( "\n", $message ) ) ) );
 		$is_html = ( $message != strip_tags( $message ) );
 

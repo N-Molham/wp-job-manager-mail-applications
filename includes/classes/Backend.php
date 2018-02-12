@@ -72,4 +72,27 @@ class Backend extends Component {
 		] );
 
 	}
+
+	/**
+	 * Get the default email content
+	 * @return string
+	 */
+	public function get_job_application_email_content() {
+		$message = <<<EOF
+Hello
+
+A candidate ([from_name]) has submitted their application for the position "[job_title]".
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+[message]
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+[meta_data]
+
+You can contact them directly at: [from_email]
+EOF;
+		return $message;
+	}
 }
