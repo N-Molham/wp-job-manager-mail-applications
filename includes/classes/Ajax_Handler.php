@@ -96,10 +96,13 @@ class Ajax_Handler extends Component {
 			apply_filters( 'create_job_application_notification_attachments', $attachments, $job_id, $application_id )
 		);
 
-		$saved_emails = array_unique( array_merge( get_option( 'wpjm_ma_emails', [] ), $recipients ) );
+		$saved_emails = array_values( array_unique( array_merge( get_option( 'wpjm_ma_emails', [] ), $recipients ) ) );
 		update_option( 'wpjm_ma_emails', $saved_emails );
 
-		$this->success( __( 'Application sent to: ', WPJM_MA_DOMAIN ) . implode( ', ', $recipients ) );
+		$this->success( [
+			'message'  => __( 'Application sent to: ', WPJM_MA_DOMAIN ) . implode( ', ', $recipients ),
+			'new_list' => $saved_emails,
+		] );
 	}
 
 	/**

@@ -6,7 +6,8 @@
 
 		$( '#the-list' ).find( 'a.button.icon-mail-application' ).each( function ( index, link ) {
 			$( this ).webuiPopover( {
-				url: link.hash
+				url        : link.hash,
+				dismissible: false
 			} )
 		} );
 
@@ -33,7 +34,19 @@
 				$button.prop( 'disabled', true ).addClass( 'loading' );
 
 				$.post( ajaxurl, request_args, function ( response ) {
-					alert( response.data );
+
+					if ( response.success ) {
+
+						$( '.wpjm-ma-mail-application' ).find( 'select' ).html( response.data.new_list.map( function ( email ) {
+							return '<option value="' + email + '">' + email + '</option>';
+						} ).join( '' ) ).trigger( 'change' );
+
+						alert( response.data.message );
+
+					} else {
+						alert( response.data );
+					}
+
 				} ).always( function () {
 					$button.prop( 'disabled', false ).removeClass( 'loading' );
 				} );
